@@ -6,6 +6,7 @@
   <title>Ilona Hair Studio — Hair Salon in Calgary, AB</title>
   <meta name="description" content="Ilona Hair Studio in Calgary: haircuts, coloring, balayage, highlights, bridal hairstyles. Book online.">
   <link rel="stylesheet" href="styles.css">
+  <a href="#portfolio">Portfolio</a> 
 </head>
 <body>
 
@@ -80,6 +81,22 @@
     </div>
   </section>
 
+  <!-- ПОРТФОЛИО -->
+<section id="portfolio" class="section">
+  <div class="container">
+    <h2>Portfolio</h2>
+    <p class="section-sub">Recent work by Ilona</p>
+    <div class="portfolio-grid">
+      <img src="img/model_1.jpeg" alt="Hair work by Ilona — photo 1">
+      <img src="img/model_2.jpeg" alt="Hair work by Ilona — photo 2">
+      <img src="img/model_3.jpeg" alt="Hair work by Ilona — photo 3">
+      <img src="img/model_4.jpeg" alt="Hair work by Ilona — photo 4">
+      <img src="img/model_5.jpeg" alt="Hair work by Ilona — photo 5">
+    </div>
+  </div>
+</section>
+
+
   <!-- ОТЗЫВЫ: начни с реального отзыва Дарины, потом добавишь остальные -->
   <section id="reviews" class="section section-alt">
     <div class="container">
@@ -123,7 +140,30 @@
     </div>
   </footer>
 
+  <div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.portfolio-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('open');
+  });
+</script>
+
+
   <!-- СЮДА позже вставим код Google Analytics (GA4) и Meta Pixel -->
+
 
 </body>
 </html>
