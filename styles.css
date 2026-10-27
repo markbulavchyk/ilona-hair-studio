@@ -120,3 +120,11 @@ body {
 @media (max-width: 600px) {
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
+.book-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.book-link:hover { text-decoration: underline; }
